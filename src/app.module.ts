@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
 import { PrismaService } from './prisma/prisma.service';
+import { TodosModule } from './todos/todos.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { PrismaService } from './prisma/prisma.service';
       installSubscriptionHandlers: true,
       buildSchemaOptions: { dateScalarMode: 'timestamp' },
     }),
+    TodosModule,
   ],
   controllers: [],
   providers: [PrismaService],
