@@ -14,12 +14,12 @@ export class TodosResolver {
   }
 
   @Query(() => [Todo], { name: 'todos' })
-  findAll() {
+  findAllTodo() {
     return this.todosService.findAll();
   }
 
   @Query(() => Todo, { name: 'todo' })
-  findOne(@Args('id', { type: () => Int }) id: number) {
+  findOneTodo(@Args('id', { type: () => Int }) id: number) {
     return this.todosService.findOne(id);
   }
 

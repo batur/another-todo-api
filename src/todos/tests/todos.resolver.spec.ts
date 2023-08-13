@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { TodosResolver } from './todos.resolver';
-import { TodosService } from './todos.service';
+import { TodosResolver } from '../todos.resolver';
+import { TodosService } from '../todos.service';
 
 describe('TodosResolver', () => {
   let resolver: TodosResolver;
