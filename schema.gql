@@ -1,0 +1,39 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateTodoInput {
+  description: String
+  title: String!
+}
+
+type Mutation {
+  createTodo(createTodoInput: CreateTodoInput!): Todo!
+  removeTodo(id: Int!): Todo!
+  updateTodo(updateTodoInput: UpdateTodoInput!): Todo!
+}
+
+type Query {
+  todo(id: Int!): Todo!
+  todos: [Todo!]!
+}
+
+"""
+`Date` type as integer. Type represents date and time as number of milliseconds from start of UNIX epoch.
+"""
+scalar Timestamp
+
+type Todo {
+  createdAt: Timestamp!
+  description: String
+  id: Int!
+  isCompleted: Boolean!
+  title: String!
+  updatedAt: Timestamp!
+}
+
+input UpdateTodoInput {
+  description: String
+  id: Int!
+  title: String
+}
